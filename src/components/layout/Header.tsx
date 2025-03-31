@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { ShoppingCart, Menu, X, Search, User } from 'lucide-react';
+import { ShoppingBag, Menu, X, Search, User } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { useCart } from '@/hooks/use-cart';
 import {
@@ -62,7 +62,7 @@ const Header = () => {
           {/* Cart and Login Buttons */}
           <div className="flex items-center space-x-4">
             <Link to="/cart" className="relative p-2 rounded-full hover:bg-gray-100 transition-colors">
-              <ShoppingCart className="h-6 w-6 text-marketplace-text-primary hover:text-marketplace-blue transition-colors" />
+              <ShoppingBag className="h-6 w-6 text-marketplace-text-primary hover:text-marketplace-blue transition-colors" />
               {items.length > 0 && (
                 <Badge className="absolute -top-1 -right-1 bg-marketplace-accent text-white" variant="destructive">
                   {items.length}

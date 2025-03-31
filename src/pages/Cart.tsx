@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -6,7 +7,7 @@ import { Separator } from '@/components/ui/separator';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { useCart } from '@/hooks/use-cart';
-import { ShoppingCart, ArrowLeft, Trash2, Check } from 'lucide-react';
+import { ShoppingBag, ArrowLeft, Trash2, Check } from 'lucide-react';
 
 const CartPage = () => {
   const { items, removeItem, updateQuantity, clearCart, getSubtotal } = useCart();
@@ -25,7 +26,7 @@ const CartPage = () => {
             <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-sm p-8 text-center">
               <div className="mb-6">
                 <div className="w-20 h-20 rounded-full bg-gray-100 flex items-center justify-center mx-auto mb-4">
-                  <ShoppingCart className="h-10 w-10 text-marketplace-text-secondary" />
+                  <ShoppingBag className="h-10 w-10 text-marketplace-text-secondary" />
                 </div>
                 <h1 className="text-2xl font-bold mb-2">Your Cart is Empty</h1>
                 <p className="text-marketplace-text-secondary mb-6">
