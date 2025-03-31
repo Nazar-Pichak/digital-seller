@@ -3,9 +3,18 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { ShoppingCart, Menu, X, Search } from 'lucide-react';
+import { ShoppingCart, Menu, X, Search, User } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { useCart } from '@/hooks/use-cart';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import { cn } from '@/lib/utils';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -52,18 +61,38 @@ const Header = () => {
           
           {/* Cart and Login Buttons */}
           <div className="flex items-center space-x-4">
-            <Link to="/cart" className="relative">
+            <Link to="/cart" className="relative p-2 rounded-full hover:bg-gray-100 transition-colors">
               <ShoppingCart className="h-6 w-6 text-marketplace-text-primary hover:text-marketplace-blue transition-colors" />
               {items.length > 0 && (
-                <Badge className="absolute -top-2 -right-2 bg-marketplace-accent" variant="destructive">
+                <Badge className="absolute -top-1 -right-1 bg-marketplace-accent text-white" variant="destructive">
                   {items.length}
                 </Badge>
               )}
             </Link>
             
-            <Button className="hidden md:inline-flex" variant="default">
-              Login
-            </Button>
+            {/* User Menu - Desktop */}
+            <NavigationMenu className="hidden md:flex">
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="bg-transparent hover:bg-gray-100">
+                    <User className="h-5 w-5 mr-1" />
+                    Account
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid w-[200px] gap-3 p-4">
+                      <div className="space-y-2">
+                        <Link to="/login" className="block w-full">
+                          <Button variant="default" className="w-full justify-start">Login</Button>
+                        </Link>
+                        <Link to="/register" className="block w-full">
+                          <Button variant="outline" className="w-full justify-start">Register</Button>
+                        </Link>
+                      </div>
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
             
             {/* Mobile Menu Button */}
             <button
@@ -115,9 +144,18 @@ const Header = () => {
               >
                 About
               </Link>
-              <Button className="w-full" variant="default">
-                Login
-              </Button>
+              <div className="pt-2 border-t border-gray-200">
+                <Link to="/login" className="block mb-2">
+                  <Button className="w-full justify-start" variant="default">
+                    Login
+                  </Button>
+                </Link>
+                <Link to="/register" className="block">
+                  <Button className="w-full justify-start" variant="outline">
+                    Register
+                  </Button>
+                </Link>
+              </div>
             </nav>
           </div>
         )}
