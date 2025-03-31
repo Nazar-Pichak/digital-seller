@@ -168,7 +168,7 @@ const CartPage = () => {
                     
                     <div className="flex justify-between">
                       <span className="text-marketplace-text-secondary">Tax</span>
-                      <span>${tax.toFixed(2)}</span>
+                      <span>${(tax as number).toFixed(2)}</span>
                     </div>
                     
                     <Separator />
