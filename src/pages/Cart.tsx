@@ -12,7 +12,7 @@ const CartPage = () => {
   const { items, removeItem, updateQuantity, clearCart, getSubtotal } = useCart();
   const subtotal = getSubtotal();
   const shipping = 0; // Digital products typically have no shipping
-  const tax = subtotal * 0.1; // Example tax calculation (10%)
+  const tax: number = subtotal * 0.1; // Example tax calculation (10%), explicitly typed as number
   const total = subtotal + shipping + tax;
   
   if (items.length === 0) {
