@@ -35,7 +35,7 @@ const HomePage = () => {
                 <Button size="lg" variant="default" className="bg-white text-marketplace-blue hover:bg-blue-50">
                   <Link to="/products">Browse Products</Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button size="lg" variant="outline" className="border-white text-marketplace-accent hover:bg-white/10">
                   <Link to="/categories">Explore Categories</Link>
                 </Button>
               </div>
