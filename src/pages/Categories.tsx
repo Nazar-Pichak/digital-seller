@@ -30,7 +30,7 @@ const Categories = () => {
                       <img 
                         src={category.image} 
                         alt={category.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                       />
                     </div>
                   </CardHeader>
