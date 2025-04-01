@@ -32,7 +32,7 @@ const HomePage = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <Button size="lg" variant="default" className="bg-white text-marketplace-blue hover:bg-blue-50">
+                <Button size="lg" variant="outline" className="bg-white border-white text-marketplace-blue hover:bg-white/10">
                   <Link to="/products">Browse Products</Link>
                 </Button>
                 <Button size="lg" variant="outline" className="border-white text-marketplace-accent hover:bg-white/10">

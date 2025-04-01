@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { ShoppingBag, Menu, X, Search, User } from 'lucide-react';
+import { Menu, X, Search, User } from 'lucide-react';
+import { FaCartArrowDown } from "react-icons/fa";
 import { Badge } from '@/components/ui/badge';
 import { useCart } from '@/hooks/use-cart';
 import {
@@ -23,12 +24,12 @@ const Header = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
+    <header className="sticky top-0 z-50 bg-marketplace-background shadow-sm">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <h1 className="text-2xl font-bold text-marketplace-blue">DigitalMarket</h1>
+            <h1 className="text-2xl font-bold text-marketplace-blue mr-4">DigitalMarket</h1>
           </Link>
           
           {/* Desktop Navigation */}
@@ -62,7 +63,7 @@ const Header = () => {
           {/* Cart and Login Buttons */}
           <div className="flex items-center space-x-4">
             <Link to="/cart" className="relative p-2 rounded-full hover:bg-gray-100 transition-colors">
-              <ShoppingBag className="h-6 w-6 text-marketplace-text-primary hover:text-marketplace-blue transition-colors" />
+              <FaCartArrowDown className="h-6 w-6 text-marketplace-text-primary hover:text-marketplace-blue transition-colors" />
               {items.length > 0 && (
                 <Badge className="absolute -top-1 -right-1 bg-marketplace-accent text-white" variant="destructive">
                   {items.length}
@@ -79,13 +80,13 @@ const Header = () => {
                     Account
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="grid w-[200px] gap-3 p-4">
+                    <div className="grid gap-3 p-4">
                       <div className="space-y-2">
-                        <Link to="/login" className="block w-full">
-                          <Button variant="default" className="w-full justify-start">Login</Button>
+                        <Link to="/login" className="block w-24">
+                          <Button variant="default" className="w-full justify-center">Login</Button>
                         </Link>
-                        <Link to="/register" className="block w-full">
-                          <Button variant="outline" className="w-full justify-start">Register</Button>
+                        <Link to="/register" className="block w-24">
+                          <Button variant="outline" className="w-full justify-center">Register</Button>
                         </Link>
                       </div>
                     </div>

@@ -1,4 +1,6 @@
 
+
+import { FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -98,14 +100,14 @@ const Footer = () => {
             © {new Date().getFullYear()} DigitalMarket. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-marketplace-text-secondary hover:text-marketplace-blue transition-colors">
-              Twitter
+            <a href="#" className="text-marketplace-text-secondary hover:text-marketplace-blue rounded-full hover:bg-gray-100 p-2 transition-colors">
+              <FaTwitter className="w-8 h-8" />
             </a>
-            <a href="#" className="text-marketplace-text-secondary hover:text-marketplace-blue transition-colors">
-              Facebook
+            <a href="#" className="text-marketplace-text-secondary hover:text-marketplace-blue rounded-full hover:bg-gray-100 p-2 transition-colors">
+              <FaFacebook className="w-8 h-8" />
             </a>
-            <a href="#" className="text-marketplace-text-secondary hover:text-marketplace-blue transition-colors">
-              Instagram
+            <a href="#" className="text-marketplace-text-secondary hover:text-marketplace-blue rounded-full hover:bg-gray-100 p-2 transition-colors">
+              <FaInstagram className="w-8 h-8" />
             </a>
           </div>
         </div>

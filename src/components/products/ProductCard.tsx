@@ -6,7 +6,8 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { useCart } from '@/hooks/use-cart';
-import { ShoppingCart, Star } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { FaCartArrowDown } from "react-icons/fa";
 
 interface ProductCardProps {
   product: Product;
@@ -71,7 +72,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           className="w-full"
           onClick={() => addItem(product)}
         >
-          <ShoppingCart className="h-4 w-4 mr-2" />
+          <FaCartArrowDown className="h-4 w-4 mr-2" />
           Add to Cart
         </Button>
       </CardContent>

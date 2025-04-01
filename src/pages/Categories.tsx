@@ -4,52 +4,7 @@ import { Link } from 'react-router-dom';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-
-// Sample category data
-const categories = [
-  {
-    id: 'digital-art',
-    name: 'Digital Art',
-    description: 'Unique digital artwork created by talented artists',
-    image: '/placeholder.svg',
-    count: 42
-  },
-  {
-    id: 'ebooks',
-    name: 'eBooks & PDFs',
-    description: 'Digital books, guides, and educational materials',
-    image: '/placeholder.svg',
-    count: 28
-  },
-  {
-    id: 'templates',
-    name: 'Website Templates',
-    description: 'Professional templates for your next web project',
-    image: '/placeholder.svg',
-    count: 35
-  },
-  {
-    id: 'music',
-    name: 'Music & Audio',
-    description: 'Royalty-free music tracks and sound effects',
-    image: '/placeholder.svg',
-    count: 19
-  },
-  {
-    id: 'software',
-    name: 'Software & Apps',
-    description: 'Useful applications and software for every need',
-    image: '/placeholder.svg',
-    count: 24
-  },
-  {
-    id: 'photos',
-    name: 'Stock Photos',
-    description: 'High-quality stock photos for commercial use',
-    image: '/placeholder.svg',
-    count: 56
-  },
-];
+import { categoriesData } from '@/data/categories';
 
 const Categories = () => {
   return (
@@ -67,7 +22,7 @@ const Categories = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {categories.map((category) => (
+            {categoriesData.map((category) => (
               <Link to={`/products?category=${category.id}`} key={category.id}>
                 <Card className="h-full hover:shadow-md transition-shadow">
                   <CardHeader className="p-0">
