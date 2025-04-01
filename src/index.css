@@ -59,22 +59,46 @@
   }
 }
 
-/* Add the animation for all links */
+/* Add the animation for specific navigation links */
 @layer components {
-  /* Apply to all links except buttons and icons */
-  a:not(button a, .btn-primary, .btn-accent, [class*="Button"], button a, [class*="icon"] a, svg a) {
+  /* Apply to specific navigation links in header */
+  header nav a {
     @apply relative;
   }
   
-  /* Create the underline pseudo-element */
-  a:not(button a, .btn-primary, .btn-accent, [class*="Button"], button a, [class*="icon"] a, svg a)::after {
+  /* Create the underline pseudo-element for header links */
+  header nav a::after {
     content: '';
     @apply absolute bottom-0 left-0 w-0 h-0.5 bg-marketplace-blue transition-all duration-300 ease-in-out;
     transform-origin: left;
   }
   
-  /* Animate the underline on hover */
-  a:not(button a, .btn-primary, .btn-accent, [class*="Button"], button a, [class*="icon"] a, svg a):hover::after {
+  /* Animate the underline on hover for header links */
+  header nav a:hover::after {
+    @apply w-full;
+  }
+  
+  /* Apply to specific sections in footer */
+  footer div:nth-child(2) a, /* Shop section */
+  footer div:nth-child(3) a, /* Company section */
+  footer div:nth-child(4) a  /* Help section */ 
+  {
+    @apply relative;
+  }
+  
+  /* Create the underline pseudo-element for footer section links */
+  footer div:nth-child(2) a::after,
+  footer div:nth-child(3) a::after,
+  footer div:nth-child(4) a::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-marketplace-blue transition-all duration-300 ease-in-out;
+    transform-origin: left;
+  }
+  
+  /* Animate the underline on hover for footer section links */
+  footer div:nth-child(2) a:hover::after,
+  footer div:nth-child(3) a:hover::after,
+  footer div:nth-child(4) a:hover::after {
     @apply w-full;
   }
   
