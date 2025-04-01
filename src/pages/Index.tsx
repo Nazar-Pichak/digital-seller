@@ -8,6 +8,7 @@ import ProductCard from '@/components/products/ProductCard';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { products, categories } from '@/data/products';
+import { categoriesData } from '@/data/categories';
 
 const HomePage = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -25,7 +26,7 @@ const HomePage = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
-                Discover Premium Digital Products for Creators
+                Discover Premium{" "}<i className="text-marketplace-accent">Digital Products</i>{" "}for Creators
               </h1>
               <p className="text-lg md:text-xl mb-8 text-blue-100">
                 Templates, graphics, fonts and tools to accelerate your next project
@@ -54,17 +55,19 @@ const HomePage = () => {
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {categories.slice(0, 4).map((category) => (
+              {categoriesData.slice(0, 4).map((category) => (
                 <Link 
                   key={category.id} 
-                  to={`/categories/${category.id}`}
-                  className="relative bg-white rounded-lg shadow-sm overflow-hidden group h-32 flex items-center justify-center"
+                  to={`/categories?=${category.id}`}
+                  className="relative bg-white rounded-lg shadow-md hover:scale-105 hover:shadow-lg transition overflow-hidden group h-32 flex items-center sm:justify-end justify-center"
+                  style={{ backgroundImage: `url(${category.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                 >
-                  <div className="text-center p-4 z-10">
-                    <h3 className="font-medium text-lg mb-1 group-hover:text-marketplace-blue transition-colors">
+                  
+                  <div className="text-center p-4 z-10 bg-white/95 rounded-sm sm:mr-5">
+                    <h3 className="font-bold text-lg mb-1 text-marketplace-blue transition-colors">
                       {category.name}
                     </h3>
-                    <p className="text-marketplace-text-secondary text-sm">{category.count} items</p>
+                    <p className="text-marketplace-blue font-medium">{category.count} items</p>
                   </div>
                   <div className="absolute inset-0 bg-marketplace-blue opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
                 </Link>

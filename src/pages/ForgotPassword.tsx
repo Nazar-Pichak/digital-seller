@@ -14,7 +14,7 @@ export default function ForgotPassword() {
     console.log('Forgot password for email:', email)
     if (email) {
       // Simulate sending a password reset email
-      window.location.href = 'check-inbox';
+      window.location.href = '/check-inbox';
     }
   }
 

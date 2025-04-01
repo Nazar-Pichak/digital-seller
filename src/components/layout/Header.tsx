@@ -16,6 +16,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from '@/lib/utils';
+import Logo from '../ui/logo';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,21 +30,21 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <h1 className="text-2xl font-bold text-marketplace-blue mr-4">DigitalMarket</h1>
+            <Logo/>
           </Link>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-marketplace-text-primary hover:text-marketplace-blue transition-colors">
+            <Link to="/" className="text-marketplace-text-primary hover:text-marketplace-blue transition-colors link-underline">
               Home
             </Link>
-            <Link to="/products" className="text-marketplace-text-primary hover:text-marketplace-blue transition-colors">
+            <Link to="/products" className="text-marketplace-text-primary hover:text-marketplace-blue transition-colors link-underline">
               Products
             </Link>
-            <Link to="/categories" className="text-marketplace-text-primary hover:text-marketplace-blue transition-colors">
+            <Link to="/categories" className="text-marketplace-text-primary hover:text-marketplace-blue transition-colors link-underline">
               Categories
             </Link>
-            <Link to="/about" className="text-marketplace-text-primary hover:text-marketplace-blue transition-colors">
+            <Link to="/about" className="text-marketplace-text-primary hover:text-marketplace-blue transition-colors link-underline">
               About
             </Link>
           </nav>
@@ -63,7 +64,7 @@ const Header = () => {
           {/* Cart and Login Buttons */}
           <div className="flex items-center space-x-4">
             <Link to="/cart" className="relative p-2 rounded-full hover:bg-gray-100 transition-colors">
-              <FaCartArrowDown className="h-6 w-6 text-marketplace-text-primary hover:text-marketplace-blue transition-colors" />
+              <FaCartArrowDown className="h-6 w-6 text-marketplace-text-secondary hover:text-marketplace-blue transition-colors" />
               {items.length > 0 && (
                 <Badge className="absolute -top-1 -right-1 bg-marketplace-accent text-white" variant="destructive">
                   {items.length}
@@ -83,7 +84,7 @@ const Header = () => {
                     <div className="grid gap-3 p-4">
                       <div className="space-y-2">
                         <Link to="/login" className="block w-24">
-                          <Button variant="default" className="w-full justify-center">Login</Button>
+                          <Button variant="outline" className="w-full justify-center">Login</Button>
                         </Link>
                         <Link to="/register" className="block w-24">
                           <Button variant="outline" className="w-full justify-center">Register</Button>
@@ -119,35 +120,35 @@ const Header = () => {
             <nav className="flex flex-col space-y-4">
               <Link
                 to="/"
-                className="text-marketplace-text-primary hover:text-marketplace-blue transition-colors"
+                className="text-marketplace-text-primary w-fit hover:text-marketplace-blue transition-colors link-underline"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
                 to="/products"
-                className="text-marketplace-text-primary hover:text-marketplace-blue transition-colors"
+                className="text-marketplace-text-primary w-fit hover:text-marketplace-blue transition-colors link-underline"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Products
               </Link>
               <Link
                 to="/categories"
-                className="text-marketplace-text-primary hover:text-marketplace-blue transition-colors"
+                className="text-marketplace-text-primary w-fit hover:text-marketplace-blue transition-colors link-underline"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Categories
               </Link>
               <Link
                 to="/about"
-                className="text-marketplace-text-primary hover:text-marketplace-blue transition-colors"
+                className="text-marketplace-text-primary w-fit hover:text-marketplace-blue transition-colors link-underline"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </Link>
               <div className="pt-2 border-t border-gray-200">
                 <Link to="/login" className="block mb-2">
-                  <Button className="w-full justify-start" variant="default">
+                  <Button className="w-full justify-start" variant="outline">
                     Login
                   </Button>
                 </Link>

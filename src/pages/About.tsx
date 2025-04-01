@@ -16,8 +16,8 @@ const About = () => {
             <h1 className="text-3xl md:text-4xl font-bold mb-6">About DigitalMarket</h1>
             
             <div className="bg-white rounded-lg shadow-sm overflow-hidden mb-10">
-              <div className="h-64 bg-gradient-to-r from-marketplace-blue to-marketplace-blue-light flex items-center justify-center">
-                <h2 className="text-3xl font-bold text-white">Your Digital Marketplace</h2>
+              <div className="h-64 bg-gradient-to-r from-marketplace-blue to-marketplace-blue-dark flex items-center justify-center">
+                <h2 className="text-3xl font-bold text-white">Your{" "}<i className="text-marketplace-accent">Digital</i>{" "}Marketplace</h2>
               </div>
               
               <div className="p-8">
