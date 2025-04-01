@@ -58,3 +58,33 @@
     @apply bg-marketplace-accent text-white hover:bg-marketplace-accent/90 transition-colors duration-200;
   }
 }
+
+/* Add the animation for all links */
+@layer components {
+  /* Apply to all links except those with button styling or special cases */
+  a:not(.product-card a, .btn-primary, .btn-accent, [class*="Button"], button a) {
+    @apply relative;
+  }
+  
+  /* Create the underline pseudo-element */
+  a:not(.product-card a, .btn-primary, .btn-accent, [class*="Button"], button a)::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-marketplace-blue transition-all duration-300 ease-in-out;
+    transform-origin: left;
+  }
+  
+  /* Animate the underline on hover */
+  a:not(.product-card a, .btn-primary, .btn-accent, [class*="Button"], button a):hover::after {
+    @apply w-full;
+  }
+  
+  /* Specific styling for navigation links */
+  nav a::after {
+    @apply bg-marketplace-blue;
+  }
+  
+  /* Footer links should have a lighter underline */
+  footer a::after {
+    @apply bg-marketplace-blue/70;
+  }
+}
