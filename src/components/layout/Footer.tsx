@@ -109,7 +109,7 @@ const Footer = () => {
         <div className="mt-8">
           <div className="mt-8 flex flex-wrap gap-4 items-center justify-center sm:justify-between">
             <Download/>
-            <div className="flex flex-col gap-3 items-center sm:flex-row">
+            <div className="btn-appstores flex items-center">
               <AppstoreButton/>
               <GooglePlayButton/>
             </div>

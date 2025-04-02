@@ -62,6 +62,12 @@
     @apply bg-marketplace-accent text-white hover:bg-marketplace-accent/90 transition-colors duration-200;
   }
 
+  @media (max-width: 338px) {
+    .btn-appstores {
+      @apply flex-col gap-3;
+    }
+  }
+
   .link-underline {
     @apply relative inline-block no-underline;
   }
