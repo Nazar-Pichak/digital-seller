@@ -58,7 +58,7 @@ const HomePage = () => {
               {categoriesData.slice(0, 4).map((category) => (
                 <Link 
                   key={category.id} 
-                  to={`/categories?=${category.id}`}
+                  to={`/categories/${category.id}`}
                   className="relative bg-white rounded-lg shadow-md hover:scale-105 hover:shadow-lg transition overflow-hidden group h-32 flex items-center sm:justify-end justify-center"
                   style={{ backgroundImage: `url(${category.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                 >
