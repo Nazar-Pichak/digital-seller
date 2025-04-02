@@ -1,5 +1,4 @@
 
-
 import { FaInstagram, FaFacebook, FaTwitter, FaDownload, FaFileInvoiceDollar } from 'react-icons/fa';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -8,6 +7,9 @@ import AppstoreButton from '../ui/appstore-button';
 import ApplePayButton from '../ui/apple-pay-button';
 import GooglePlayButton from '../ui/google-play-button';
 import GooglePayButton from '../ui/google-pay-button';
+import PayPalButton from '../ui/paypal-button';
+import VisaButton from '../ui/visa-button';
+import MastercardButton from '../ui/mastercard-button';
 
 const Footer = () => {
   return (
@@ -104,7 +106,7 @@ const Footer = () => {
 
           <div className="mt-8 flex flex-col md:flex-row gap-2 justify-between items-center">
             <h3 className="text-lg font-semibold text-marketplace-accent flex items-center gap-1"><FaDownload/>Download <span className="text-marketplace-blue">App</span></h3>
-            <div className="flex flex-col gap-2 sm:gap-0 items-center sm:flex-row">
+            <div className="flex flex-col gap-2 sm:gap-4 items-center sm:flex-row">
               <AppstoreButton/>
               <GooglePlayButton/>
             </div>
@@ -112,9 +114,12 @@ const Footer = () => {
 
           <div className="mt-8 flex flex-col md:flex-row gap-2 justify-between items-center">
               <h3 className="text-lg font-semibold text-marketplace-blue flex items-center gap-1"><FaFileInvoiceDollar/>Payments <span className="text-marketplace-accent">Methods</span></h3>
-              <div className="flex flex-col gap-2 items-center sm:gap-7 sm:flex-row md:mr-4">
+              <div className="flex flex-wrap gap-2 items-center sm:gap-3 justify-center sm:flex-row md:mr-4">
                 <ApplePayButton/>
                 <GooglePayButton/>
+                <PayPalButton/>
+                <VisaButton/>
+                <MastercardButton/>
             </div>
           </div>
         </div>
