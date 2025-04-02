@@ -34,16 +34,20 @@
     --ring: 212 85% 60%;
 
     --radius: 0.5rem;
+
+    overflow-x: hidden;
+
   }
 }
 
 @layer base {
+
   * {
     @apply border-border;
   }
   
   body {
-    @apply bg-marketplace-background text-marketplace-text-primary antialiased;
+    @apply bg-marketplace-background text-marketplace-text-primary antialiased overflow-hidden;
   }
   
   .product-card {

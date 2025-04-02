@@ -9,7 +9,8 @@ import GooglePlayButton from '../ui/google-play-button';
 import GooglePayButton from '../ui/google-pay-button';
 import PayPalButton from '../ui/paypal-button';
 import VisaButton from '../ui/visa-button';
-import MastercardButton from '../ui/mastercard-button';
+import BitcoinButton from '../ui/bitcoin-button';
+import Download from '../ui/download';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const Footer = () => {
@@ -105,10 +106,13 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-200 mt-8">
-          <div className="mt-8 flex flex-wrap gap-4 justify-center">
-            <AppstoreButton/>
-            <GooglePlayButton/>
+        <div className="mt-8">
+          <div className="mt-8 flex flex-wrap gap-4 items-center justify-center sm:justify-between">
+            <Download/>
+            <div className="flex flex-col gap-3 items-center sm:flex-row">
+              <AppstoreButton/>
+              <GooglePlayButton/>
+            </div>
           </div>
 
           <div className="mt-8 flex flex-wrap gap-3 justify-center">
@@ -116,14 +120,14 @@ const Footer = () => {
             <GooglePayButton/>
             <PayPalButton/>
             <VisaButton/>
-            <MastercardButton/>
+            <BitcoinButton/>
           </div>
         </div>
         
         <div className="border-t border-gray-200 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <strong className="text-marketplace-text-secondary text-sm mb-4 md:mb-0">
+          <p className="text-marketplace-text-secondary font-bold text-sm mb-4 md:mb-0">
             © {new Date().getFullYear()} DigitalMarket. <span className="hidden sm:inline">All rights reserved.</span>
-          </strong>
+          </p>
           <div className="flex items-center space-x-4">
             {!isMobile && <SocialMedia />}
             <div className="flex items-center space-x-4">
