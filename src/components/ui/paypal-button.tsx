@@ -19,8 +19,8 @@ export default function PayPalButton() {
           <path d="M16.6646 8.82721C16.6376 9.00713 16.4839 9.13324 16.3022 9.13324H13.2304C13.0797 9.13324 12.9492 9.23459 12.9289 9.38235L12.4407 12.307C12.4407 12.307 14.0371 10.2897 17.0581 10.9879C17.6284 11.1127 16.6646 8.82721 16.6646 8.82721Z" fill="#FFAA00" />
           <defs>
             <linearGradient id="paint0_linear_0_1" x1="16.0107" y1="15.1585" x2="27.2663" y2="15.1585" gradientUnits="userSpaceOnUse">
-              <stop offset="0" stop-color="#0D004C" />
-              <stop offset="1" stop-color="#22198E" />
+              <stop offset="0" stopColor="#0D004C" />
+              <stop offset="1" stopColor="#22198E" />
             </linearGradient>
           </defs>
         </svg>
