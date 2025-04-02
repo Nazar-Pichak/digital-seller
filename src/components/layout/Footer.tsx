@@ -100,19 +100,22 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="mt-8 flex flex-col md:flex-row gap-2 justify-between items-center">
-          <h3 className="text-lg font-semibold text-marketplace-accent flex items-center gap-1"><FaDownload/>Download <span className="text-marketplace-blue">App</span></h3>
-          <div className="flex flex-col gap-2 sm:gap-0 items-center sm:flex-row">
-            <AppstoreButton/>
-            <GooglePlayButton/>
-          </div>
-        </div>
+        <div className="border-t border-gray-200 mt-8">
 
-        <div className="mt-8 flex flex-col md:flex-row gap-2 justify-between items-center">
-            <h3 className="text-lg font-semibold text-marketplace-blue flex items-center gap-1"><FaFileInvoiceDollar/>Payments <span className="text-marketplace-accent">Methods</span></h3>
-            <div className="flex flex-col gap-2 items-center sm:gap-7 sm:flex-row md:mr-4">
-              <ApplePayButton/>
-              <GooglePayButton/>
+          <div className="mt-8 flex flex-col md:flex-row gap-2 justify-between items-center">
+            <h3 className="text-lg font-semibold text-marketplace-accent flex items-center gap-1"><FaDownload/>Download <span className="text-marketplace-blue">App</span></h3>
+            <div className="flex flex-col gap-2 sm:gap-0 items-center sm:flex-row">
+              <AppstoreButton/>
+              <GooglePlayButton/>
+            </div>
+          </div>
+
+          <div className="mt-8 flex flex-col md:flex-row gap-2 justify-between items-center">
+              <h3 className="text-lg font-semibold text-marketplace-blue flex items-center gap-1"><FaFileInvoiceDollar/>Payments <span className="text-marketplace-accent">Methods</span></h3>
+              <div className="flex flex-col gap-2 items-center sm:gap-7 sm:flex-row md:mr-4">
+                <ApplePayButton/>
+                <GooglePayButton/>
+            </div>
           </div>
         </div>
         
