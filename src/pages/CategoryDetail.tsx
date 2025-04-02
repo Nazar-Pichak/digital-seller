@@ -10,12 +10,12 @@ import { categoriesData } from '@/data/categories';
 
 const CategoryDetail = () => {
   const { id } = useParams<{ id: string }>();
-  const [category, setCategory] = useState(categoriesData.find(cat => cat.id === id));
+  const [category, setCategory] = useState(categoriesData.find(cat => cat.id === parseInt(id || '0')));
   const [categoryProducts, setCategoryProducts] = useState(products.filter(product => product.category === category?.name));
   
   useEffect(() => {
     // Update category when id changes
-    const foundCategory = categoriesData.find(cat => cat.id === id);
+    const foundCategory = categoriesData.find(cat => cat.id === parseInt(id || '0'));
     setCategory(foundCategory);
     
     // Update filtered products when category changes
