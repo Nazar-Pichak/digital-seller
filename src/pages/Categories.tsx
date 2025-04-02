@@ -23,7 +23,7 @@ const Categories = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {categoriesData.map((category) => (
-              <Link to={`/products?category=${category.id}`} key={category.id}>
+              <Link to={`/categories/${category.id}`} key={category.id}>
                 <Card className="h-full hover:shadow-md transition-shadow">
                   <CardHeader className="p-0">
                     <div className="h-48 bg-gray-100 rounded-t-lg overflow-hidden">
