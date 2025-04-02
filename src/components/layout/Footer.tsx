@@ -1,9 +1,13 @@
 
 
-import { FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa';
+import { FaInstagram, FaFacebook, FaTwitter, FaDownload, FaFileInvoiceDollar } from 'react-icons/fa';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SocialMedia from '../ui/social-media';
+import AppstoreButton from '../ui/appstore-button';
+import ApplePayButton from '../ui/apple-pay-button';
+import GooglePlayButton from '../ui/google-play-button';
+import GooglePayButton from '../ui/google-pay-button';
 
 const Footer = () => {
   return (
@@ -96,9 +100,26 @@ const Footer = () => {
           </div>
         </div>
         
+        <div className="mt-8 flex flex-col md:flex-row gap-2 justify-between items-center">
+          <h3 className="text-lg font-semibold text-marketplace-accent flex items-center gap-1"><FaDownload/>Download <span className="text-marketplace-blue">App</span></h3>
+          <div className="flex flex-col gap-2 sm:gap-0 items-center sm:flex-row">
+            <AppstoreButton/>
+            <GooglePlayButton/>
+          </div>
+        </div>
+
+        <div className="mt-8 flex flex-col md:flex-row gap-2 justify-between items-center">
+            <h3 className="text-lg font-semibold text-marketplace-blue flex items-center gap-1"><FaFileInvoiceDollar/>Payments <span className="text-marketplace-accent">Methods</span></h3>
+            <div className="flex flex-col gap-2 items-center sm:gap-7 sm:flex-row md:mr-4">
+              <ApplePayButton/>
+              <GooglePayButton/>
+          </div>
+        </div>
+        
+        
         <div className="border-t border-gray-200 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <strong className="text-marketplace-text-secondary text-sm">
-            © {new Date().getFullYear()} DigitalMarket. All rights reserved.
+            © {new Date().getFullYear()} DigitalMarket. <span className="hidden sm:inline">All rights reserved.</span>
           </strong>
           <div className="flex items-center space-x-6 mt-4 md:mt-0">
             <SocialMedia/>
