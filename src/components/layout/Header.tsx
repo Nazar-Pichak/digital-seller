@@ -76,7 +76,9 @@ const Header = () => {
             <NavigationMenu className="hidden md:flex">
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent hover:bg-gray-100">
+                  <NavigationMenuTrigger 
+                    className="bg-transparent data-[state=open]:bg-marketplace-accent data-[state=open]:text-white hover:bg-marketplace-accent hover:text-white"
+                  >
                     <User className="h-5 w-5 mr-1" />
                     Account
                   </NavigationMenuTrigger>
