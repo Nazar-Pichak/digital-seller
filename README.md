@@ -22,3 +22,4 @@ npm run dev
 
 <img src="https://lovable.dev/favicon.ico" alt="Lovable" width="40" height="40" /> <img src="https://reactjs.org/favicon.ico" alt="React" width="40" height="40" /> <img src="https://static.figma.com/app/icon/1/favicon.ico" alt="Figma" width="40" height="40" /> <img src="https://img.icons8.com/?size=100&id=4PiNHtUJVbLs&format=png&color=000000" alt="TailwindCSS" width="40" height="40" /> <img src="https://img.icons8.com/?size=100&id=dJjTWMogzFzg&format=png&color=000000" alt="Vite" width="40" height="40" /> <img src="https://img.icons8.com/?size=100&id=nCj4PvnCO0tZ&format=png&color=000000" alt="TypeScript" width="40" height="40" /> 
 
+
